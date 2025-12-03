@@ -23,7 +23,8 @@
 # misc
 .DS_Store
 *.pem
-
+Project
+.prettierrc
 # debug
 npm-debug.log*
 yarn-debug.log*
@@ -39,3 +40,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+

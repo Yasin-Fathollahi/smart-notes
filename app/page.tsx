@@ -1,19 +1,20 @@
-import Button from './components/button';
+import Image from 'next/image';
+import Button from './components/UI/button';
 import Select from './components/inputs/select';
+import TextInput from './components/inputs/text';
+import HomeHeader from './components/headers/home';
+import ProgressCircle from './components/UI/progress-circular';
+import moreIcon from '../public/icons/more.svg';
+import TodaysProgressSection from './components/todays-progress';
 
 export default function Home() {
   return (
-    <div className="text-center">
-      <h1>home</h1>
-      <Button size="lg" type="link" href="#" variant="primary">
-        This is a test button
-      </Button>
-
-      <Select
-        id="drop-down-1"
-        label="test drop down"
-        options={['opt-1', 'opt-2', 'opt-3']}
-      />
+    <div>
+      <HomeHeader />
+      <main>
+        <TodaysProgressSection />
+      </main>
+      <nav className="w-screen"></nav>
     </div>
   );
 }

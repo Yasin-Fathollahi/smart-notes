@@ -1,5 +1,5 @@
 'use client';
-import { Activity, useState, type ReactNode } from 'react';
+import { Activity, useState } from 'react';
 import Image from 'next/image';
 import arrowDown from '../../../public/icons/Iconly/Bold/Arrow - Down 2.svg';
 

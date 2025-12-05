@@ -125,9 +125,11 @@
   --spacing-px-button-large: var(--space-8);
   --spacing-py-button-small: var(--space-4);
   --spacing-px-button-small: var(--space-7);
+
   --spacing-mx-page: var(--space-7);
   --spacing-mt-page: var(--space-8);
   --spacing-mb-page-title: var(--space-9);
+
   --spacing-mb-section-heading: var(--space-6);
   --spacing-gap-x-projects: var(--space-6);
   --spacing-gap-x-tasks-filters: var(--space-4);
@@ -184,7 +186,7 @@
   }
 
   .input {
-    @apply p-p-input rounded-input;
+    @apply p-p-input rounded-input drop-shadow-card;
 
     @variant hover {
     }
@@ -213,6 +215,23 @@
   }
 }
 
-/* @layer utilities {
-  
-} */
+@layer utilities {
+  .outer-shadow {
+    box-shadow:
+      6px 6px 10px 1px rgb(0 0 0 / 0.15),
+      -6px -6px 10px 1px rgb(255 255 255 / 0.7);
+  }
+
+  .outer-shadow {
+    box-shadow:
+      inset 4px 4px 6px -1px rgb(0 0 0 / 0.2),
+      inset -4px -4px 6px -1px rgb(255 255 255 / 0.7),
+      0.5px 0.5px 0px rgb(0 0 0 / 0.15),
+      0px 12px 10px -10px rgb(0 0 0 / 0.05);
+  }
+
+  .stroke-dash {
+    stroke-dasharray: 450px;
+    stroke-dashoffset: 100px;
+  }
+}

@@ -1,7 +1,5 @@
-import Image, { type StaticImageData } from 'next/image';
-
 type IconWithBGProps = {
-  icon: StaticImageData;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   hasBg: boolean;
   size: 'sm' | 'md';
   colorName: 'yellow' | 'purple' | 'orange' | 'pink';
@@ -23,27 +21,26 @@ export default function CardIcon({
           bg: 'w-8.5 h-8.5',
           icon: 24,
         };
+  const Icon = icon;
   if (hasBg) {
     return (
       <div
         style={{ backgroundColor: `var(--color-${colorName}-1)` }}
         className={`${sizes.bg} rounded-icon-bg flex items-center justify-center`}
       >
-        <Image
-          src={icon}
-          alt="suitcase icon"
+        <Icon
           height={sizes.icon}
           width={sizes.icon}
+          fill={`var(--color-${colorName}-6)`}
         />
       </div>
     );
   }
   return (
-    <Image
-      src={icon}
-      alt="suitcase icon"
+    <Icon
       height={sizes.icon}
       width={sizes.icon}
+      fill={`var(--color-${colorName}-6)`}
     />
   );
 }

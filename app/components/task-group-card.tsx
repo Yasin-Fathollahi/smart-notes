@@ -1,9 +1,8 @@
-import { type StaticImageData } from 'next/image';
 import CardIcon from './UI/icon-card';
 import ProgressCircle from './UI/progress-circular';
 
 type TaskGroupCardProps = {
-  icon: StaticImageData;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   progress: number;
   colorName: 'yellow' | 'purple' | 'orange' | 'pink';
   taskCount: number;

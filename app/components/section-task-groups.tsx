@@ -1,6 +1,6 @@
 import RegularSection from './section-regular';
 import TaskGroupCard from './task-group-card';
-import suitcaseIcon from '@/public/icons/suitcase.svg';
+import briefcaseIcon from '@/public/icons/briefcase.svg';
 
 export default function TaskGroupsSection() {
   return (
@@ -8,19 +8,19 @@ export default function TaskGroupsSection() {
       <ul className="flex flex-col gap-gap-md">
         <TaskGroupCard
           colorName="pink"
-          icon={suitcaseIcon}
+          icon={briefcaseIcon}
           progress={75}
           taskCount={1}
         />
         <TaskGroupCard
           colorName="orange"
-          icon={suitcaseIcon}
+          icon={briefcaseIcon}
           progress={100}
           taskCount={0}
         />
         <TaskGroupCard
           colorName="purple"
-          icon={suitcaseIcon}
+          icon={briefcaseIcon}
           progress={25}
           taskCount={24}
         />

@@ -1,7 +1,6 @@
-import Image from 'next/image';
 import ProgressCircle from './UI/progress-circular';
 import Button from './UI/button';
-import moreIcon from '../../public/icons/more.svg';
+import MoreIcon from '../../public/icons/more.svg';
 
 export default function TodaysProgressSection() {
   return (
@@ -24,11 +23,10 @@ export default function TodaysProgressSection() {
         </Button>
       </div>
       <div className="col-start-7 w-fit my-auto">
-        {/* <label htmlFor="progress-today"></label> */}
         <ProgressCircle />
       </div>
       <div className="col-start-12">
-        <Image src={moreIcon} alt="discover more icon" width={32} height={32} />
+        <MoreIcon width={24} height={24} />
       </div>
     </section>
   );

@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import notificationIcon from '../../../public/icons/notification/notification-active.svg';
+import NotificationIcon from '@/public/icons/notification/notification-active.svg';
 
 export default function HomeHeader() {
   return (
@@ -19,11 +18,10 @@ export default function HomeHeader() {
             </h1>
           </div>
         </div>
-        <Image
-          src={notificationIcon}
-          alt="notification icon"
+        <NotificationIcon
           width={24}
           height={24}
+          fill={'var(--color-icon-arrow)'}
         />
       </div>
     </header>

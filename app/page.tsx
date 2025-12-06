@@ -1,11 +1,6 @@
-import Image from 'next/image';
-import Button from './components/UI/button';
-import Select from './components/inputs/select';
-import TextInput from './components/inputs/text';
-import HomeHeader from './components/headers/home';
-import ProgressCircle from './components/UI/progress-circular';
-import moreIcon from '../public/icons/more.svg';
+import HomeHeader from './components/headers/home-header';
 import TodaysProgressSection from './components/todays-progress';
+import InProgressSection from './components/in-progress';
 
 export default function Home() {
   return (
@@ -13,6 +8,7 @@ export default function Home() {
       <HomeHeader />
       <main>
         <TodaysProgressSection />
+        <InProgressSection />
       </main>
       <nav className="w-screen"></nav>
     </div>

@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import notificationIcon from '../../../public/icons/notification.svg';
+import notificationIcon from '../../../public/icons/notification/notification-active.svg';
 
 export default function HomeHeader() {
   return (
-    <header className="mb-6">
+    <header className="mb-mb-section">
       <div className="flex justify-between">
         <div className="flex items-center gap-4">
           <div className="rounded-full w-11.5 h-11.5 bg-primary"></div>
@@ -15,8 +15,13 @@ export default function HomeHeader() {
               className="rounded-full"
             /> */}
           <div className="flex flex-col items-start gap-0.5">
-            <p className="text-body-base">Hello!</p>
-            <p className="text-body-lg font-body-semibold">Yasin Fathollahi</p>
+            <h1>
+              <span className="text-body-base">Hello!</span>
+              <br />
+              <span className="text-body-lg font-body-semibold">
+                Yasin Fathollahi
+              </span>
+            </h1>
           </div>
         </div>
         <Image

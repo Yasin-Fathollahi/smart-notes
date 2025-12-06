@@ -2,13 +2,23 @@
 
 :root {
   /* ---- COLORS (raw palette only) ---- */
-  --color-purple-400: #ab94ff;
-  --color-purple-600: #5f33e1;
+  --color-purple-4: #ab94ff;
+  --color-purple-6: #5f33e1;
 
-  --color-gray-100: #f5f3ff;
-  --color-gray-200: #ede8ff;
-  --color-gray-600: #6e6a7c;
-  --color-gray-800: #24252c;
+  --color-blue-1: #eee9ff;
+  --color-blue-2: #e7f3ff;
+  --color-blue-6: #0087ff;
+
+  --color-orange-1: #ffe9e1;
+  --color-orange-6: #ff7d53;
+
+  --color-pink-1: #ffe4f2;
+  --color-pink-6: #f478b8;
+
+  --color-gray-1: #f5f3ff;
+  --color-gray-2: #ede8ff;
+  --color-gray-6: #6e6a7c;
+  --color-gray-8: #24252c;
 
   --color-black: #000000;
   --color-white: #ffffff;
@@ -75,25 +85,36 @@
 
 @theme {
   /* ---- COLORS ---- */
-  --color-primary: var(--color-purple-600); /* choose the primary shade */
-  --color-primary-weak: var(--color-purple-400);
+  --color-primary: var(--color-purple-6); /* choose the primary shade */
+  --color-primary-weak: var(--color-purple-4);
 
   --color-bg-default: var(--color-white);
-  --color-surface: var(--color-gray-100);
-  --color-muted: var(--color-gray-200);
-  --color-text-default: var(--color-gray-800);
-  --color-text-muted: var(--color-gray-600);
+  --color-surface: var(--color-gray-1);
+  --color-muted: var(--color-gray-2);
+  --color-text-default: var(--color-gray-8);
+  --color-text-muted: var(--color-gray-6);
   --color-black: var(--color-black);
   --color-white: var(--color-white);
+
+  --color-blue-extra-light: var(--color-blue-1);
+  --color-blue-light: var(--color-blue-2);
+  --color-blue: var(--color-blue-6);
+
+  --color-orange-light: var(--color-orange-1);
+  --color-orange: var(--color-orange-6);
+
+  --color-pink-light: var(--color-pink-1);
+  --color-pink: var(--color-pink-6);
 
   /* ---- TYPOGRAPHY ---- */
   --text-body-xs: var(--font-size-1);
   --text-body-sm: var(--font-size-2);
   --text-body-base: var(--font-size-3);
   --text-body-lg: var(--font-size-4);
-  --text-heading-sm: var(--font-size-5);
-  --text-heading-md: var(--font-size-6);
-  --text-heading-lg: var(--font-size-7);
+  --text-heading-sm: var(--font-size-4);
+  --text-heading-md: var(--font-size-5);
+  --text-heading-lg: var(--font-size-6);
+  --text-heading-xl: var(--font-size-7);
 
   --font-weight-body-regular: var(--font-weight-regular);
   --font-weight-body-semibold: var(--font-weight-semibold);
@@ -130,6 +151,7 @@
   --spacing-mt-page: var(--space-8);
   --spacing-mb-page-title: var(--space-9);
 
+  --spacing-mb-section: var(--space-8);
   --spacing-mb-section-heading: var(--space-6);
   --spacing-gap-x-projects: var(--space-6);
   --spacing-gap-x-tasks-filters: var(--space-4);
@@ -212,6 +234,14 @@
 
   .card {
     @apply p-p-task-card rounded-card drop-shadow-card;
+  }
+
+  .progress::-webkit-progress-bar {
+    @apply bg-white rounded-progress-bar rounded-l-lg h-1.5;
+  }
+
+  .progress::-webkit-progress-value {
+    @apply bg-blue rounded-progress-bar;
   }
 }
 

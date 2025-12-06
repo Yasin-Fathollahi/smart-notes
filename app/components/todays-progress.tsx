@@ -6,13 +6,13 @@ import moreIcon from '../../public/icons/more.svg';
 export default function TodaysProgressSection() {
   return (
     <section
-      className="bg-primary rounded-task-card-status drop-shadow-card p-p-task-card
+      className="mb-mb-section bg-primary rounded-task-card-status drop-shadow-card p-p-task-card
         grid grid-cols-12 "
     >
       <div className="flex flex-col gap-8">
-        <p className="w-40 text-body-base font-body-regular">
+        <h2 className="w-40 text-body-base font-body-regular">
           Your today’s tasks almost done!
-        </p>
+        </h2>
         <Button
           type="link"
           href="#"

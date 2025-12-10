@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${LexendDeca.variable} font-lexend antialiased dark:bg-black dark:text-white mx-mx-page mt-mt-page`}
+        className={`${LexendDeca.variable} font-lexend antialiased bg-bg-default text-text-default ${/*dark:bg-black dark:text-white  */ ''} mx-mx-page mt-mt-page`}
       >
         {children}
       </body>

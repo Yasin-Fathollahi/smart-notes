@@ -10,7 +10,7 @@ export default function Nav() {
     <nav className="fixed bottom-0 left-0 h-h-nav w-full rounded-t-nav ">
       <ul className="flex items-center h-full">
         <li className="tab-left w-full">
-          <div className="py-py-nav pl-px-nav flex justify-center gap-10.5">
+          <div className="py-py-nav px-px-nav flex justify-center gap-10.5">
             <Link href="#">
               <HomeIcon width={28} height={28} />
             </Link>
@@ -26,8 +26,8 @@ export default function Nav() {
             </Link>
           </div>
         </li>
-        <li className="tab-right w-full ">
-          <div className="py-py-nav pr-px-nav flex justify-center gap-10.5">
+        <li className="tab-right w-full">
+          <div className="py-py-nav px-px-nav flex justify-center gap-10.5">
             <Link href="#">
               <DocumentIcon width={28} height={28} />
             </Link>

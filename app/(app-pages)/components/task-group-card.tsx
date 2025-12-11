@@ -1,5 +1,5 @@
-import CardIcon from './UI/icon-card';
-import ProgressCircle from './UI/progress-circular';
+import CardIcon from '@/app/components/UI/icon-card';
+import ProgressCircle from '@/app/components/UI/progress-circular';
 
 type TaskGroupCardProps = {
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;

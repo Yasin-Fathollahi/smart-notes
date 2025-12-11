@@ -1,5 +1,5 @@
 import { type ReactNode } from 'react';
-import capitalizeEachWord from '../utilities/cap-words';
+import capitalizeEachWord from '@/app/lib/utils/cap-words';
 
 type RegularSectionProps = {
   children: ReactNode;

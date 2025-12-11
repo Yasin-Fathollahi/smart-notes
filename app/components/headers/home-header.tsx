@@ -18,11 +18,13 @@ export default function HomeHeader() {
             </h1>
           </div>
         </div>
-        <NotificationIcon
-          width={24}
-          height={24}
-          fill={'var(--color-icon-arrow)'}
-        />
+        <button aria-label="Notifications">
+          <NotificationIcon
+            width={24}
+            height={24}
+            fill={'var(--color-icon-arrow)'}
+          />
+        </button>
       </div>
     </header>
   );

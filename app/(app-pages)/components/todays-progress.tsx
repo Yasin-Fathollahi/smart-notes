@@ -1,6 +1,6 @@
-import ProgressCircle from './UI/progress-circular';
-import Button from './UI/button';
-import MoreIcon from '../../public/icons/more.svg';
+import ProgressCircle from '@/app/components/UI/progress-circular';
+import Button from '@/app/components/UI/button';
+import MoreIcon from '@/public/icons/more.svg';
 
 export default function TodaysProgressSection() {
   return (

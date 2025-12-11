@@ -1,4 +1,4 @@
-import RegularSection from './section-regular';
+import RegularSection from '../../components/section-regular';
 import TaskGroupCard from './task-group-card';
 import briefcaseIcon from '@/public/icons/briefcase.svg';
 

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { type ReactNode } from 'react';
 
 type CommonProps = {
-  variant: 'primary' | 'outline';
+  variant: 'primary' | 'outline' | 'deactive';
   size: 'sm' | 'lg';
   children: ReactNode;
   className?: string;
@@ -19,7 +19,7 @@ type LinkProps = {
 
 export default function Button(props: ButtonProps | LinkProps) {
   const { type, variant, size, children, className = '' } = props;
-  const classes = `btn btn-${variant} btn-${size} inline-block ${className} font-body-semibold ${size === 'lg' ? 'text-body-lg' : 'text-body-base'}`;
+  const classes = `btn btn-${variant} btn-${size} inline-block ${className} font-body-semibold ${size === 'lg' ? 'text-body-lg' : 'text-body-base'} whitespace-nowrap`;
   if (type === 'button') {
     return (
       <button type="button" className={classes}>

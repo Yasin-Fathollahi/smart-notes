@@ -165,11 +165,12 @@
   --spacing-mb-page-title: var(--space-9);
 
   --spacing-mb-section: var(--space-8);
+  --spacing-mb-section-lg: var(--space-9);
   --spacing-mb-section-heading: var(--space-6);
 
   --spacing-gap-sm: var(--space-5);
   --spacing-gap-md: var(--space-6);
-  --spacing-gap-: var(--space-8);
+  --spacing-gap-lg: var(--space-8);
 
   --spacing-p-task-card: var(--space-6);
   --spacing-p-input: var(--space-4);
@@ -225,6 +226,10 @@
     }
   }
 
+  .btn-deactive {
+    @apply bg-muted text-primary;
+  }
+
   .btn-outline {
   }
 
@@ -250,7 +255,7 @@
   }
 
   .date-card {
-    @apply py-py-date-card px-px-date-card rounded-date-card;
+    @apply w-16 min-h-21 flex flex-col items-center gap-2 py-py-date-card px-px-date-card rounded-date-card shadow-card;
   }
 
   .card {

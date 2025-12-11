@@ -1,4 +1,4 @@
-import CardIcon from './UI/icon-card';
+import CardIcon from '@/app/components/UI/icon-card';
 
 type ProgressCardProps = {
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;

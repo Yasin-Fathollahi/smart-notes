@@ -5,14 +5,14 @@ type TaskStatusProps = {
 };
 
 export default function TaskStatus({ status }: TaskStatusProps) {
-  let color: 'blue' | 'primary' | 'orange';
+  let colors: string;
   if (status === 'done') {
-    color = 'primary';
+    colors = 'text-primary bg-primary-light';
   } else if (status === 'in progress') {
-    color = 'orange';
+    colors = 'text-orange bg-orange-light';
   } else {
-    color = 'blue';
+    colors = 'text-blue bg-blue-light';
   }
-  const classes = `text-body-sm text-${color} bg-${color}-light px-1.5 rounded-circle capitalize`;
+  const classes = `text-body-sm ${colors} px-1.5 rounded-circle capitalize`;
   return <p className={classes}>{status}</p>;
 }

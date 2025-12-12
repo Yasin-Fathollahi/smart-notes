@@ -12,10 +12,14 @@ export default function Nav() {
         <li className="tab-left w-full">
           <div className="py-py-nav px-px-nav flex justify-center gap-10.5">
             <Link href="#">
-              <HomeIcon width={28} height={28} />
+              <HomeIcon width={28} height={28} className="fill-primary" />
             </Link>
             <Link href="#">
-              <CalendarIcon width={28} height={28} />
+              <CalendarIcon
+                width={28}
+                height={28}
+                className="fill-primary-semi-light/40"
+              />
             </Link>
           </div>
         </li>
@@ -29,10 +33,18 @@ export default function Nav() {
         <li className="tab-right w-full">
           <div className="py-py-nav px-px-nav flex justify-center gap-10.5">
             <Link href="#">
-              <DocumentIcon width={28} height={28} />
+              <DocumentIcon
+                width={28}
+                height={28}
+                className="fill-primary-semi-light/40"
+              />
             </Link>
             <Link href="#">
-              <TwoUsersIcon width={28} height={28} />
+              <TwoUsersIcon
+                width={28}
+                height={28}
+                className="fill-primary-semi-light/40"
+              />
             </Link>
           </div>
         </li>

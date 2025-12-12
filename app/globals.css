@@ -246,7 +246,7 @@
   }
 
   .select-option {
-    @apply p-p-select-option cursor-pointer border-t-black border-t-2;
+    @apply p-p-select-option cursor-pointer;
   }
 
   .input-label {

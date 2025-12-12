@@ -6,14 +6,22 @@ type TextInputProps = {
 
 export default function TextInput({ id, label, length }: TextInputProps) {
   return (
-    <div className="input text-black flex flex-col gap-3 text-left">
+    <div className="input text-text-default flex flex-col gap-3 text-left">
       <label htmlFor={id} className="input-label">
         {label}
       </label>
       {length === 'short' ? (
-        <input id={id} type="text" className="focus:outline-primary " />
+        <input
+          id={id}
+          type="text"
+          className="focus:outline-primary-semi-light"
+        />
       ) : (
-        <textarea id={id} rows={3} />
+        <textarea
+          id={id}
+          rows={3}
+          className="focus:outline-primary-semi-light resize-none"
+        />
       )}
     </div>
   );

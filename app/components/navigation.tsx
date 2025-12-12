@@ -40,8 +40,12 @@ export default function Nav() {
         </li>
         <li className="tab-fab flex items-center">
           <div className="top">
-            <Link href="#" className="add-button" aria-label="Add Task">
-              <AddIcon width={28} height={28} />
+            <Link
+              href="/add-project"
+              className="add-button"
+              aria-label="Add Project"
+            >
+              <AddIcon width={36} height={36} />
             </Link>
           </div>
         </li>

@@ -22,3 +22,5 @@ export type DayOfWeek =
   | 'wednesday'
   | 'thursday'
   | 'friday';
+
+export type TaskStatusOption = 'done' | 'in progress' | 'to do';

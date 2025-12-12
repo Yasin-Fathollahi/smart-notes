@@ -1,4 +1,4 @@
-import Task from '../today/components/task';
+import Task from './task';
 
 export default function TasksList() {
   return (

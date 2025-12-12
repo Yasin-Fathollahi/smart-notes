@@ -4,17 +4,14 @@ import MoreIcon from '@/public/icons/more.svg';
 
 export default function TodaysProgressSection() {
   return (
-    <section
-      className="mb-mb-section bg-primary rounded-task-card-status drop-shadow-card p-p-task-card
-        grid grid-cols-12 "
-    >
+    <section className="todays-progress-section">
       <div className="flex flex-col gap-8">
         <h2 className="w-40 text-body-base font-body-regular">
           Your today’s tasks almost done!
         </h2>
         <Button
           type="link"
-          href="#"
+          href="/today"
           size="sm"
           variant="primary"
           className="bg-white text-primary w-fit whitespace-nowrap"

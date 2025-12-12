@@ -94,9 +94,8 @@
 
 @theme {
   /* ---- COLORS ---- */
-  --color-primary-lightest: var(--color-purple-2);
-  --color-primary-lighter: var(--color-purple-4);
-  --color-primary-light: var(--color-purple-5);
+  --color-primary-light: var(--color-purple-1);
+  --color-primary-semi-light: var(--color-purple-4);
   --color-primary: var(--color-purple-6); /* choose the primary shade */
 
   --color-bg-default: var(--color-white);
@@ -290,6 +289,14 @@
     @apply w-full h-1/2 rounded-b-circle bg-transparent shadow-solid-nav;
     /* shadow-[0px_30px_0px_25px_var(--color-blue-1)]; */
   }
+
+  .scrollbar-x {
+    @apply [&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300;
+  }
+
+  .todays-progress-section {
+    @apply mb-mb-section bg-primary rounded-task-card-status shadow-card p-p-task-card grid grid-cols-12 text-white;
+  }
 }
 
 @layer utilities {
@@ -299,7 +306,7 @@
       -6px -6px 10px 1px rgb(255 255 255 / 0.7);
   }
 
-  .outer-shadow {
+  .inner-shadow {
     box-shadow:
       inset 4px 4px 6px -1px rgb(0 0 0 / 0.2),
       inset -4px -4px 6px -1px rgb(255 255 255 / 0.7),

@@ -3,9 +3,9 @@ import Button from '@/app/components/UI/button';
 export default function TaskFilters() {
   return (
     <nav aria-label="Task filters" className="mb-mb-section">
-      <ul className="flex gap-gap-sm overflow-x-auto pb-2">
+      <ul className="flex gap-gap-sm overflow-x-auto pb-2 scrollbar-x">
         <li>
-          <Button type="button" size="sm" variant="deactive">
+          <Button type="button" size="sm" variant="primary">
             All
           </Button>
         </li>

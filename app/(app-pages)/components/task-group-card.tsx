@@ -6,6 +6,7 @@ type TaskGroupCardProps = {
   progress: number;
   colorName: 'yellow' | 'purple' | 'orange' | 'pink';
   taskCount: number;
+  title: string;
 };
 
 export default function TaskGroupCard({
@@ -13,6 +14,7 @@ export default function TaskGroupCard({
   progress,
   colorName,
   taskCount,
+  title,
 }: TaskGroupCardProps) {
   return (
     <li className="card bg-white text-text-default">
@@ -21,7 +23,7 @@ export default function TaskGroupCard({
           <CardIcon colorName={colorName} size="md" hasBg icon={icon} />
           <div className="flex flex-col items-start gap-0.5">
             <h1>
-              <span className="text-body-base">Personal Project</span>
+              <span className="text-body-base capitalize">{title}</span>
               <br />
               <p className="text-text-muted text-body-sm font-body-regular">
                 {(taskCount === 0 ? 'All' : taskCount) +

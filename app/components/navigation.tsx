@@ -6,36 +6,22 @@ import CalendarIcon from '@/public/icons/calendar.svg';
 import DocumentIcon from '@/public/icons/document-text.svg';
 import TwoUsersIcon from '@/public/icons/profile-2user.svg';
 import AddIcon from '@/public/icons/add.svg';
+import NavLink from './nav-link';
 
 export default function Nav() {
   const path = usePathname();
-  console.log(path);
 
   return (
     <nav className="fixed bottom-0 left-0 h-h-nav w-full rounded-t-nav ">
       <ul className="flex items-center h-full">
         <li className="tab-left w-full">
-          <div className="py-py-nav px-px-nav flex justify-center gap-10.5">
-            <Link href="/" aria-label="Home">
-              <HomeIcon
-                width={28}
-                height={28}
-                className={
-                  path === '/' ? 'fill-primary' : 'fill-primary-semi-light/80'
-                }
-              />
-            </Link>
-            <Link href="/today" aria-label="Today's Tasks">
-              <CalendarIcon
-                width={28}
-                height={28}
-                className={
-                  path === '/today'
-                    ? 'fill-primary'
-                    : 'fill-primary-semi-light/80'
-                }
-              />
-            </Link>
+          <div className="flex justify-center h-full">
+            <NavLink icon={HomeIcon} href="/" isActive={path === '/'} />
+            <NavLink
+              icon={CalendarIcon}
+              href="/today"
+              isActive={path === '/today'}
+            />
           </div>
         </li>
         <li className="tab-fab flex items-center">
@@ -50,29 +36,17 @@ export default function Nav() {
           </div>
         </li>
         <li className="tab-right w-full">
-          <div className="py-py-nav px-px-nav flex justify-center gap-10.5">
-            <Link href="#" aria-label="Statistics">
-              <DocumentIcon
-                width={28}
-                height={28}
-                className={
-                  path === '/stats'
-                    ? 'fill-primary'
-                    : 'fill-primary-semi-light/80'
-                }
-              />
-            </Link>
-            <Link href="#" aria-label="Account">
-              <TwoUsersIcon
-                width={28}
-                height={28}
-                className={
-                  path === '/account'
-                    ? 'fill-primary'
-                    : 'fill-primary-semi-light/80'
-                }
-              />
-            </Link>
+          <div className="flex justify-center h-full">
+            <NavLink
+              icon={DocumentIcon}
+              href="/stats"
+              isActive={path === '/stats'}
+            />
+            <NavLink
+              icon={TwoUsersIcon}
+              href="/account"
+              isActive={path === '/account'}
+            />
           </div>
         </li>
       </ul>

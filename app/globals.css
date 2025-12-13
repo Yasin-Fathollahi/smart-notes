@@ -175,8 +175,6 @@
   --spacing-p-input: var(--space-4);
   --spacing-p-select-option: var(--space-6);
 
-  --spacing-py-nav: var(--space-6);
-  --spacing-px-nav: var(--space-9);
   --radius-nav: var(--radius-3xl);
   --spacing-h-nav: var(--space-12);
 
@@ -296,6 +294,10 @@
 
   .todays-progress-section {
     @apply mb-mb-section bg-primary rounded-task-card-status shadow-card p-p-task-card grid grid-cols-12 text-white;
+  }
+
+  .nav-link {
+    @apply w-full h-full flex justify-center items-center;
   }
 }
 

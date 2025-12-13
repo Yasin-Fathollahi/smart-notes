@@ -1,26 +1,18 @@
-import type { DayOfWeek, Month } from '@/src/types/types';
+import { dateSplitter } from '@/app/lib/utils/helpers';
 
-type DateCardProps = {
-  month: Month;
-  day: number | string;
-  dayOfWeek: DayOfWeek;
-  isActive?: boolean;
-};
-export default function DateCard({
-  month,
-  day,
-  dayOfWeek,
-  isActive,
-}: DateCardProps) {
+export default function DateCard({ index }: { index: number }) {
+  const now = new Date();
+  const cardDate = new Date(now.setDate(now.getDate() + index));
+  const { dayOfMonth, dayOfWeek, month } = dateSplitter(cardDate);
   return (
     <li>
       <button
         type="button"
-        className={`date-card ${isActive && 'bg-primary text-white'}`}
+        className={`date-card ${index === 0 && 'bg-primary text-white'}`}
       >
         <p className="text-body-xs capitalize">{month}</p>
-        <p className="text-body-lg">{day}</p>
-        <p className="text-body-xs capitalize">{dayOfWeek.split('day')[0]}</p>
+        <p className="text-body-lg">{dayOfMonth}</p>
+        <p className="text-body-xs capitalize">{dayOfWeek}</p>
       </button>
     </li>
   );

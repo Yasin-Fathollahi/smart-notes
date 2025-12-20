@@ -6,7 +6,7 @@ import BookIcon from '@/public/icons/book.svg';
 
 export default function TaskGroupsSection() {
   return (
-    <RegularSection heading="task groups" itemCount={3}>
+    <RegularSection heading="task groups" itemCount={4}>
       <ul className="flex flex-col gap-gap-md">
         <TaskGroupCard
           colorName="pink"

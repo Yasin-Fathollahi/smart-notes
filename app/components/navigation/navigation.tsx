@@ -18,8 +18,8 @@ export default function Nav() {
             <NavLink icon={HomeIcon} href="/" isActive={path === '/'} />
             <NavLink
               icon={CalendarIcon}
-              href="/today"
-              isActive={path === '/today'}
+              href="/daily"
+              isActive={path === '/daily'}
             />
           </div>
         </li>

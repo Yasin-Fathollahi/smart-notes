@@ -2,6 +2,7 @@
 import AddIcon from '@/public/icons/add.svg';
 import { useRef, useState } from 'react';
 import RadialOption from './radial-option';
+import { IoDocument, IoDocuments } from 'react-icons/io5';
 
 type ActiveOption = 'list' | 'group' | null;
 
@@ -87,22 +88,18 @@ export default function AddButton() {
           active={activeOption === 'list'}
           visible={isHolding}
         >
-          <p
-            className={`absolute left-1/2 top-1/2 -translate-1/2 text-body-lg font-body-semibold  ${activeOption === 'list' ? 'text-white' : 'text-text-default'}`}
-          >
-            L
-          </p>
+          <IoDocument
+            className={`absolute left-1/2 top-1/2 -translate-1/2 ${activeOption === 'list' ? 'fill-white' : 'fill-primary'} w-6 h-6`}
+          />
         </RadialOption>
         <RadialOption
           angle={40}
           active={activeOption === 'group'}
           visible={isHolding}
         >
-          <p
-            className={`absolute left-1/2 top-1/2 -translate-1/2 text-body-lg font-body-semibold  ${activeOption === 'group' ? 'text-white' : 'text-text-default'}`}
-          >
-            G
-          </p>
+          <IoDocuments
+            className={`absolute left-1/2 top-1/2 -translate-1/2 ${activeOption === 'group' ? 'fill-white' : 'fill-primary'} w-6 h-6`}
+          />
         </RadialOption>
       </div>
       <button

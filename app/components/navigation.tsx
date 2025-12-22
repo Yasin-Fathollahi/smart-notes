@@ -1,12 +1,11 @@
 'use client';
 import { usePathname } from 'next/navigation';
-import Link from 'next/link';
 import HomeIcon from '@/public/icons/home.svg';
 import CalendarIcon from '@/public/icons/calendar.svg';
 import DocumentIcon from '@/public/icons/document-text.svg';
 import TwoUsersIcon from '@/public/icons/profile-2user.svg';
-import AddIcon from '@/public/icons/add.svg';
 import NavLink from './nav-link';
+import AddButton from './add-button';
 
 export default function Nav() {
   const path = usePathname();
@@ -26,13 +25,7 @@ export default function Nav() {
         </li>
         <li className="tab-fab flex items-center">
           <div className="top">
-            <Link
-              href="/add-project"
-              className="add-button"
-              aria-label="Add Project"
-            >
-              <AddIcon width={36} height={36} />
-            </Link>
+            <AddButton />
           </div>
         </li>
         <li className="tab-right w-full">

@@ -80,13 +80,31 @@ export default function AddButton() {
   }
 
   return (
-    <div className="">
-      {isHolding && (
-        <div className="absolute inset-0 pointer-events-none">
-          <RadialOption angle={-40} active={activeOption === 'list'} />
-          <RadialOption angle={40} active={activeOption === 'group'} />
-        </div>
-      )}
+    <div>
+      <div className="absolute inset-0 pointer-events-none">
+        <RadialOption
+          angle={-40}
+          active={activeOption === 'list'}
+          visible={isHolding}
+        >
+          <p
+            className={`absolute left-1/2 top-1/2 -translate-1/2 text-body-lg font-body-semibold  ${activeOption === 'list' ? 'text-white' : 'text-text-default'}`}
+          >
+            L
+          </p>
+        </RadialOption>
+        <RadialOption
+          angle={40}
+          active={activeOption === 'group'}
+          visible={isHolding}
+        >
+          <p
+            className={`absolute left-1/2 top-1/2 -translate-1/2 text-body-lg font-body-semibold  ${activeOption === 'group' ? 'text-white' : 'text-text-default'}`}
+          >
+            G
+          </p>
+        </RadialOption>
+      </div>
       <button
         className="add-button cursor-pointer touch-none"
         aria-label="Add"

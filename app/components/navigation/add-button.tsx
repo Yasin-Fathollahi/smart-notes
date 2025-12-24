@@ -120,7 +120,7 @@ export default function AddButton() {
       </div>
       <div>
         <div
-          className={`add-button bg-white transition-all duration-1000 ${createMode ? 'scale-5000 z-50' : 'scale-100'}`}
+          className={`add-button bg-white transition-all ${createMode ? 'scale-5000 z-50 duration-1000' : 'scale-100 duration-600'}`}
         />
 
         <Modal

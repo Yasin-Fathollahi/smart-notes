@@ -284,7 +284,7 @@
   }
 
   .top {
-    @apply w-full h-1/2 rounded-b-circle bg-transparent shadow-solid-nav;
+    @apply w-full h-1/2 rounded-b-circle bg-transparent shadow-solid-nav z-20;
     /* shadow-[0px_30px_0px_25px_var(--color-blue-1)]; */
   }
 

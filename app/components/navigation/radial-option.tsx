@@ -3,16 +3,16 @@ export default function RadialOption({
   angle,
   active,
   children,
-  visible,
+  optionVisible,
 }: {
   angle: number;
   active: boolean;
   children: ReactNode;
-  visible: boolean;
+  optionVisible: boolean;
 }) {
   return (
     <div
-      className={`absolute left-1/2 top-1/2 h-12 w-12 rounded-full transition-all ${active ? 'bg-primary scale-110 shadow-active-nav-button' : 'bg-muted'} ${visible ? 'blur-none opacity-100' : 'blur-xs opacity-0'}`}
+      className={`absolute left-1/2 top-1/2 h-12 w-12 rounded-full transition-all ${active ? 'bg-primary scale-110 shadow-active-nav-button' : 'bg-muted'} ${optionVisible ? 'blur-none opacity-100' : 'blur-xs opacity-0'}`}
       style={{
         transform: `
           rotate(${angle}deg)

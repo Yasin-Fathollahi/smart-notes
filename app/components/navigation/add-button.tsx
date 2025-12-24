@@ -47,7 +47,7 @@ export default function AddButton() {
     }, 75);
   }
 
-  function handlePointerUp(e: React.PointerEvent) {
+  function handlePointerUp() {
     if (holdTimeout.current) {
       clearTimeout(holdTimeout.current);
     }

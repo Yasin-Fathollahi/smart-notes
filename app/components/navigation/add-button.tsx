@@ -3,8 +3,8 @@ import AddIcon from '@/public/icons/add.svg';
 import { useRef, useState } from 'react';
 import RadialOption from './radial-option';
 import { IoDocument, IoDocuments } from 'react-icons/io5';
-import AddList from '../forms/add-list';
-import Modal from '../forms/modal';
+import NewList from '../forms/new-list';
+import QuickPage from '../forms/quick-page';
 
 type Option = 'list' | 'project' | null;
 
@@ -123,15 +123,14 @@ export default function AddButton() {
           className={`add-button bg-white transition-all ${createMode ? 'scale-5000 z-50 duration-1000' : 'scale-100 duration-600'}`}
         />
 
-        <Modal
-          heading="Add List"
+        <QuickPage
           isOpen={createMode === 'list'}
           onReset={() => {
             setCreateMode(null);
           }}
         >
-          <AddList />
-        </Modal>
+          <NewList title={'Untitled List'} isOpen={createMode === 'list'} />
+        </QuickPage>
       </div>
     </div>
   );

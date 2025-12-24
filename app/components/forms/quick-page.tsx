@@ -1,34 +1,28 @@
 'use client';
 import { createPortal } from 'react-dom';
 import { type ReactNode } from 'react';
-import { IoClose } from 'react-icons/io5';
+import ArrowIcon from '@/public/icons/Arrow - Left.svg';
 
-type ModalProps = {
+type QuickPageProps = {
   isOpen: boolean;
   onReset: () => void;
-  heading: string;
   children: ReactNode;
 };
 
-export default function Modal({
+export default function QuickPage({
   isOpen,
   onReset,
-  heading,
   children,
-}: ModalProps) {
-  const classes = `px-mx-page pt-mt-page m-0 z-40 top-0 left-0 right-0 fixed transition-all duration-200 ${isOpen ? 'opacity-100 delay-300' : 'opacity-0'}`;
+}: QuickPageProps) {
+  const classes = `px-mx-page pt-mt-page m-0 fixed inset-0 transition-all duration-200 ${isOpen ? 'opacity-100 delay-300 z-40' : 'opacity-0 delay-100 -z-50'}`;
 
   if (!typeof window) return null;
 
   return createPortal(
     <div className={classes}>
       <header className="flex justify-between mb-mb-section-heading">
-        <span />
-        <h2 className="text-heading-sm font-heading-semibold text-center">
-          {heading}
-        </h2>
         <button type="button" onClick={onReset} className="cursor-pointer">
-          <IoClose className="fill-text-default w-8 h-8" />
+          <ArrowIcon className="fill-text-default w-6 h-6" />
         </button>
       </header>
       <main>{children}</main>

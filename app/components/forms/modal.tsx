@@ -16,7 +16,7 @@ export default function Modal({
   heading,
   children,
 }: ModalProps) {
-  const classes = `px-mx-page bg-red-500 h-screen pt-mt-page m-0  top-0 left-0 right-0 fixed transition-all duration-200 ${isOpen ? 'opacity-100 delay-300 z-40' : '-z-10 opacity-0'}`;
+  const classes = `px-mx-page h-screen pt-mt-page m-0  top-0 left-0 right-0 fixed transition-all duration-200 ${isOpen ? 'opacity-100 delay-300 z-40' : 'opacity-0 -z-10'}`;
 
   if (!typeof window) return null;
 

@@ -1,7 +1,7 @@
 import HomeHeader from '@/app/components/headers/home-header';
 import TodaysProgressSection from './components/todays-progress';
-import InProgressSection from './components/in-progress';
-import TaskGroupsSection from './components/section-task-groups';
+import ProjectsSection from './components/projects-section';
+import TaskListsSection from './components/lists-section';
 
 export default function Home() {
   return (
@@ -9,8 +9,8 @@ export default function Home() {
       <HomeHeader />
       <main>
         <TodaysProgressSection />
-        <InProgressSection />
-        <TaskGroupsSection />
+        <ProjectsSection />
+        <TaskListsSection />
       </main>
       <nav className="w-screen"></nav>
     </div>

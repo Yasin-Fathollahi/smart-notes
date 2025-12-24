@@ -6,7 +6,7 @@ import TasksList from './components/tasks-list';
 export default function TodaysTasks() {
   return (
     <div>
-      <Header heading="Today's Tasks" />
+      <Header heading="Daily Tasks" />
       <main>
         <DateSelector />
         <TaskFilters />

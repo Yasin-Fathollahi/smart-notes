@@ -11,7 +11,7 @@ export default function TodaysProgressSection() {
         </h2>
         <Button
           type="link"
-          href="/today"
+          href="/daily"
           size="sm"
           variant="primary"
           className="bg-white text-primary w-fit whitespace-nowrap"

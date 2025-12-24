@@ -1,7 +1,7 @@
 import CardIcon from '@/app/components/UI/icon-card';
 import ProgressCircle from '@/app/components/UI/progress-circular';
 
-type TaskGroupCardProps = {
+type TaskListCardProps = {
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   progress: number;
   colorName: 'yellow' | 'purple' | 'orange' | 'pink';
@@ -9,13 +9,13 @@ type TaskGroupCardProps = {
   title: string;
 };
 
-export default function TaskGroupCard({
+export default function TaskListCard({
   icon,
   progress,
   colorName,
   taskCount,
   title,
-}: TaskGroupCardProps) {
+}: TaskListCardProps) {
   return (
     <li className="card bg-white text-text-default">
       <div className="flex justify-between">

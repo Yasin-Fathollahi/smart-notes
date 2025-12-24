@@ -1,7 +1,7 @@
 import { type ReactNode } from 'react';
-import { type Svgr } from '@/src/types/types';
+import { type Svgr } from '@/app/lib/types/types';
 import BgBlurryCircles from '@/public/icons/background-blurry-circles.svg';
-import Nav from '@/app/components/navigation';
+import Nav from '@/app/components/navigation/navigation';
 const BlurryBg: Svgr = BgBlurryCircles;
 
 export default function Layout({ children }: { children: ReactNode }) {

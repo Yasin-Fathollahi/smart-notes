@@ -129,7 +129,14 @@ export default function AddButton() {
             setCreateMode(null);
           }}
         >
-          <NewList title={'Untitled List'} isOpen={createMode === 'list'} />
+          <NewList
+            title={'Untitled List'}
+            isOpen={createMode === 'list'}
+            onReset={() => {
+              setCreateMode(null);
+            }}
+            isNewList
+          />
         </QuickPage>
       </div>
     </div>

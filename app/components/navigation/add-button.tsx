@@ -123,12 +123,7 @@ export default function AddButton() {
           className={`add-button bg-white transition-all ${createMode ? 'scale-5000 z-50 duration-1000' : 'scale-100 duration-600'}`}
         />
 
-        <QuickPage
-          isOpen={createMode === 'list'}
-          onReset={() => {
-            setCreateMode(null);
-          }}
-        >
+        <QuickPage isOpen={createMode === 'list'}>
           <NewList
             title={'Untitled List'}
             isOpen={createMode === 'list'}

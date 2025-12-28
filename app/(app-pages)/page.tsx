@@ -12,7 +12,7 @@ export default function Home() {
         <ProjectsSection />
         <TaskListsSection />
       </main>
-      <nav className="w-screen"></nav>
+      <div className="h-h-nav" aria-hidden />
     </div>
   );
 }

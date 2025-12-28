@@ -288,8 +288,12 @@
     /* shadow-[0px_30px_0px_25px_var(--color-blue-1)]; */
   }
 
-  .scrollbar-x {
+  .scrollbar {
     @apply [&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300;
+  }
+
+  .scrollbar-hidden {
+    @apply [&::-webkit-scrollbar]:hidden;
   }
 
   .todays-progress-section {

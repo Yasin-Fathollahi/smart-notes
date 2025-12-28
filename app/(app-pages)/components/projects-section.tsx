@@ -4,7 +4,7 @@ import BriefcaseIcon from '@/public/icons/briefcase.svg';
 export default function ProjectsSection() {
   return (
     <RegularSection heading="ongoing projects" itemCount={2}>
-      <ul className=" flex gap-gap-md overflow-x-auto overflow-y-hidden pb-2 scrollbar-x">
+      <ul className=" flex gap-gap-md overflow-x-auto overflow-y-hidden pb-2 scrollbar-hidden ">
         <Project
           colorName="orange"
           icon={BriefcaseIcon}

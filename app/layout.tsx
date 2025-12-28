@@ -14,13 +14,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={`${LexendDeca.variable} font-lexend antialiased bg-bg-default text-text-default ${/*dark:bg-black dark:text-white  */ ''} mx-mx-page mt-mt-page`}
+        className={`h-full ${LexendDeca.variable} font-lexend antialiased bg-bg-default text-text-default px-mx-page pt-mt-page`}
       >
         {children}
       </body>

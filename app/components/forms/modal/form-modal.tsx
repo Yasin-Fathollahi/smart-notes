@@ -51,41 +51,43 @@ export default function FormModal({
       onClose={handleCloseModal}
       className="p-p-task-card rounded-card mx-auto my-auto backdrop:bg-black/25 overflow-y-hidden"
     >
-      <h3
-        className="font-heading-semibold text-heading-sm mb-mb-section-heading"
-        style={{ color: activeColorVar }}
-      >
-        New list
-      </h3>
-      <div className="flex gap-4 mb-4">
-        <button type="button" className="cursor-pointer" onClick={toggleMode}>
-          {activeIcon?.Icon ? (
-            <activeIcon.Icon className={`w-6 h-6`} fill={activeColorVar} />
-          ) : (
-            <LuSmilePlus className={`w-6 h-6`} stroke={activeColorVar} />
-          )}
-        </button>
-        <input
-          type="text"
-          className={`focus:outline-none border-b-2 text-text-default`}
-          placeholder="Groceries"
-          style={{ borderColor: activeColorVar }}
-        />
-      </div>
-      <div className="relative mb-4">
-        <IconOptions
-          activeColor={activeColor}
+      <form action="">
+        <h3
+          className="font-heading-semibold text-heading-sm mb-mb-section-heading"
+          style={{ color: activeColorVar }}
+        >
+          New list
+        </h3>
+        <div className="flex gap-4 mb-4">
+          <button type="button" className="cursor-pointer" onClick={toggleMode}>
+            {activeIcon?.Icon ? (
+              <activeIcon.Icon className={`w-6 h-6`} fill={activeColorVar} />
+            ) : (
+              <LuSmilePlus className={`w-6 h-6`} stroke={activeColorVar} />
+            )}
+          </button>
+          <input
+            type="text"
+            className={`focus:outline-none border-b-2 text-text-default`}
+            placeholder="Groceries"
+            style={{ borderColor: activeColorVar }}
+          />
+        </div>
+        <div className="relative mb-4">
+          <IconOptions
+            activeColor={activeColor}
+            mode={mode}
+            setActiveIcon={setActiveIcon}
+          />
+          <ColorOptions mode={mode} setActiveColor={setActiveColor} />
+        </div>
+
+        <ModalActions
+          handleCloseModal={handleCloseModal}
           mode={mode}
           setActiveIcon={setActiveIcon}
         />
-        <ColorOptions mode={mode} setActiveColor={setActiveColor} />
-      </div>
-
-      <ModalActions
-        handleCloseModal={handleCloseModal}
-        mode={mode}
-        setActiveIcon={setActiveIcon}
-      />
+      </form>
     </dialog>
   );
 }

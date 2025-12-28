@@ -6,11 +6,11 @@ const BlurryBg: Svgr = BgBlurryCircles;
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <>
+    <div className="h-full">
       <BlurryBg className="h-screen fixed left-0 top-0 -z-10" />
       {children}
-      <div className="h-h-nav" aria-hidden></div>
+      {/* Space for fixed nav */}
       <Nav />
-    </>
+    </div>
   );
 }

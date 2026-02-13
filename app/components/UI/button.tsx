@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { type ReactNode } from 'react';
+import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 
 type CommonProps = {
   variant: 'primary' | 'outline' | 'deactive';
@@ -10,27 +10,32 @@ type CommonProps = {
 
 type ButtonProps = {
   type: 'button';
-} & CommonProps;
+} & CommonProps &
+  ComponentPropsWithoutRef<'button'>;
 
 type LinkProps = {
   type: 'link';
   href: string;
-} & CommonProps;
+} & CommonProps &
+  ComponentPropsWithoutRef<'a'>;
 
 export default function Button(props: ButtonProps | LinkProps) {
   const { type, variant, size, children, className = '' } = props;
   const classes = `btn btn-${variant} btn-${size} inline-block ${className} font-body-semibold ${size === 'lg' ? 'text-body-lg' : 'text-body-base'} whitespace-nowrap`;
   if (type === 'button') {
+    const { ...rest } = props;
     return (
-      <button type="button" className={classes}>
+      <button className={classes} {...rest}>
         {children}
       </button>
     );
   }
 
-  const { href } = props;
+  const { href, ...rest } = props;
+  const linkClasses =
+    classes + ' bg-white text-primary w-fit whitespace-nowrap';
   return (
-    <Link href={href} className={classes}>
+    <Link href={href} className={linkClasses} {...rest}>
       {children}
     </Link>
   );

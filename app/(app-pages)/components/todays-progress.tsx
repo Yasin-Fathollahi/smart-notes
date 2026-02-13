@@ -9,13 +9,7 @@ export default function TodaysProgressSection() {
         <h2 className="w-40 text-body-base font-body-regular">
           Your today’s tasks almost done!
         </h2>
-        <Button
-          type="link"
-          href="/daily"
-          size="sm"
-          variant="primary"
-          className="bg-white text-primary w-fit whitespace-nowrap"
-        >
+        <Button type="link" href="/daily" size="sm" variant="primary">
           View Tasks
         </Button>
       </div>

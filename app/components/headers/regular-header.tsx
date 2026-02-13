@@ -8,7 +8,9 @@ export default function Header({ heading }: { heading: string }) {
       <Link href=".." aria-label="Go back">
         <ArrowIcon width={28} height={28} fill={'var(--color-icon-arrow)'} />
       </Link>
-      <h1 className="text-heading-sm font-heading-semibold">{heading}</h1>
+      <h1 className="text-heading-sm font-heading-semibold capitalize">
+        {heading}
+      </h1>
       <button aria-label="Notifications">
         <NotificationIcon
           width={24}

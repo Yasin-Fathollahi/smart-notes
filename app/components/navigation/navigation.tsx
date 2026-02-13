@@ -37,8 +37,8 @@ export default function Nav() {
             />
             <NavLink
               icon={TwoUsersIcon}
-              href="/account"
-              isActive={path === '/account'}
+              href="/profile"
+              isActive={path === '/profile'}
             />
           </div>
         </li>
